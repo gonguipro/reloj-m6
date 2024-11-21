@@ -236,28 +236,113 @@ body{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más fuerte en hover */
 }
 
-/*fechas*/
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.fechas{
-    align-items: center;
-    text-align: center;
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #4b6b8f;
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal */
+.zona-horaria {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.show-country {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: gray;
-    font-size: 25px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.short-date{
-    padding-bottom: 10px;
+.show-country img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 200px;
+    height: 150px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.long-date{
-    padding-bottom: 10px;
+.show-country img:hover {
+    transform: scale(1.05);
 }
 
+button {
+    background-color: #4b6b8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
-/*zona horaria*/
-.zona-horaria{
+button:hover {
+    background-color: #3b5674;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Estilos para las fechas */
+.fechas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.fechas div {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
     text-align: center;
+}
+
+.fechas .short-date {
+    background-color: #fff;
+    color: #4b6b8f;
+    font-size: 18px;
+}
+
+.fechas .long-date {
+    background-color: #f1f1f1;
+    color: #2a2a2a;
+    font-size: 20px;
+}
+
+.fechas .simplified-long-date {
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-size: 16px;
+}
+
+/* Reloj de zona horaria */
+#clock {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
 }
