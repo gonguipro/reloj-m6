@@ -1,12 +1,70 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RELOJ-M6</title>
     <link rel="stylesheet" href="index.css">
- </head>
- <body>
-    
- </body>
- </html>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="titulo">RELOJ JAVASCRIPT</div>
+    <div class="clock-dial">
+        <div class="point"></div>
+        <div class="hour hour-1">1</div>
+        <div class="hour hour-2">2</div>
+        <div class="hour hour-3">3</div>
+        <div class="hour hour-4">4</div>
+        <div class="hour hour-5">5</div>
+        <div class="hour hour-6">6</div>
+        <div class="hour hour-7">7</div>
+        <div class="hour hour-8">8</div>
+        <div class="hour hour-9">9</div>
+        <div class="hour hour-10">10</div>
+        <div class="hour hour-11">11</div>
+        <div class="hour hour-12">12</div>
+
+        <div class="minute-hand-wrapper" id="minute-hand">
+            <div class="minute-hand">
+                <div class="hand"></div>
+                <div class="arrow">V</div>
+            </div>
+        </div>
+
+        <div class="hour-hand-wrapper" id="hour-hand">
+            <div class="hour-hand">
+                <div class="hand"></div>
+                <div class="arrow">V</div>
+            </div>
+        </div>
+
+        <div class="second-hand-wrapper" id="second-hand">
+            <div class="second-hand">
+                <div class="hand"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+    <div class="reloj-digital">
+        <div id="am-pm-clock">
+            <span id="clock-text"></span>
+        </div>
+        <button id="btn-toggle">Cambiar a <span id="hrFormat">24H</span></button>
+    </div>
+    <div class="fechas">
+        <div class="short-date"></div>
+        <div class="long-date"></div>
+        <div class="simplified-long-date"></div>
+    </div>
+    <div class="zona-horaria">
+        <h2>ZONA HORARIA EN 3 PAISES</h2>
+        <div class="show-country">
+            <img id="city-img" src="" alt="pais" style="width: 200px; height: 150px;">
+            <div id="clock"></div>
+            <button id="madrid">MADRID</button>
+            <button id="nyc">NUEVA YORK</button>
+            <button id="pekin">PEKIN</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,3 +1,263 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: red;
+    margin-top: 0;
+    padding-top: 0;
+}
+.clock-dial{
+    width: 500px;
+    height: 500px;
+    border: 10px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.point{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 240px;
+    left: 240px;
+}
+
+.hour{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+}
+
+.hour-1{
+    top: 40px;
+    right: 130px;
+}
+
+.hour-2{
+    top: 125px;
+    right: 45px;
+}
+
+.hour-3{
+    top: 235px;
+    right: 10px;
+}
+
+.hour-4{
+    top: 345px;
+    right: 45px;
+}
+
+.hour-5{
+    top: 430px;
+    right: 130px;
+}
+
+.hour-6{
+    bottom: 10px;
+    left: 240px;
+}
+
+.hour-7{
+    top: 430px;
+    left: 130px;
+}
+
+.hour-8{
+    top: 345px;
+    left: 45px;
+}
+
+.hour-9{
+    top: 235px;
+    left: 10px;
+}
+
+.hour-10{
+    top: 125px;
+    left: 45px;
+}
+
+.hour-11{
+    top: 40px;
+    left: 130px;
+}
+
+.hour-12{
+    top: 10px;
+    left: 235px;
+}
+
+.minute-hand-wrapper{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 50%;
+}
+
+.minute-hand{
+    position: relative;
+}
+
+.minute-hand .hand{
+    width: 4px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    left: 198px;
+}
+
+.minute-hand .arrow{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 190px;
+    top: -7px;
+}
+
+.hour-hand-wrapper{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border-radius: 50%;
+}
+
+.hour-hand{
+    position: relative;
+}
+
+.hour-hand .hand{
+    width: 4px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    left: 148px;
+}
+
+.hour-hand .arrow{
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 140px;
+    top: -7px;
+}
+
+.second-hand-wrapper{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    border-radius: 50%;
+}
+
+.second-hand{
+    position: relative;
+}
+
+.second-hand .hand{
+    width: 2px;
+    height: 175px;
+    background-color: green;
+    position: absolute;
+    left: 174px;
+}
+
+/* Estilo general del reloj digital */
+.reloj-digital {
+    text-align: center;
+    margin-top: 5px; 
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    transition: all 0.3s ease; 
+}
+
+#btn-toggle {
+    background-color: #ff7f50; /* Color coral brillante */
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase; /* Mayúsculas para el texto */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+#am-pm-clock {
+    background: linear-gradient(145deg, #1e1e1e, #333333); 
+    width: 220px; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 1px; 
+}
+
+#clock-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto */
+}
+
+#btn-toggle:hover {
+    background-color: #ff6347; /* Cambia el color cuando pasas el mouse */
+    transform: scale(1.1); /* Efecto de aumento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más fuerte en hover */
+}
+
+/*fechas*/
+
+.fechas{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gray;
+    font-size: 25px;
+}
+
+.short-date{
+    padding-bottom: 10px;
+}
+
+.long-date{
+    padding-bottom: 10px;
+}
+
+
+/*zona horaria*/
+.zona-horaria{
+    text-align: center;
 }
